@@ -1,16 +1,11 @@
 import Content from "./components/Content";
-import "./App.css"
-// import { TaskContext } from "./context/TaskContext";
+import "./App.css";
 
-function App()
-{
-  return(
+function App() {
+  return (
     <div className="m_appwrapper">
-      
-      
-      <Content></Content>
-      
+      <Content />
     </div>
-  )
+  );
 }
 export default App;
