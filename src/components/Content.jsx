@@ -45,12 +45,15 @@ const Content = ()=>
 
     return(
         <div className="m_appContent">
-            container
+            
             <AddItem onNewItem={handleNewItem} ></AddItem>
 
             <div className="m_listContainer">
+                {
+                    taskList.length>0? <TodoList taskList={taskList} changeStatus={setTaskComplete} ></TodoList> : <></>
+                }
 
-            <TodoList taskList={taskList} changeStatus={setTaskComplete} ></TodoList>
+            
 
 {
     completedTaskList.length>0 ? <CompletedTask taskList={completedTaskList} ></CompletedTask> : <></>

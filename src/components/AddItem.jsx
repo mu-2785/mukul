@@ -61,7 +61,7 @@ const AddItem = (  { onNewItem }  )=>
     return(
         <div className="m_AddItem">
             {/* <input type="checkbox" name="itemCompleted" id="itemCompleted" className="m_itemCompleted"/> */}
-            <input type="text" name="itemName" id="itemName" className="m_itemName"  value={itemName} onChange={(event)=>{handleNameChange(event)}}/>
+            <input type="text" name="itemName" id="itemName" className="m_itemName"  value={itemName} onChange={(event)=>{handleNameChange(event)}} placeholder="ENTER TASK" />
             {/* <input type="text" name="itemDesc" id="itemDesc" className="m_itemDesc"  value={itemDesc} onChange={(event)=>{handleDescChange(event)}}/> */}
             <input type="date" name="itemDate" id="itemDate" className="m_itemDate" value={itemDate} onChange={(event)=>{handleDateChange(event)}} />
             <button onClick={()=>{handleAddButton()}} className="m_addButton" >Add</button>
