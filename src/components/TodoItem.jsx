@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const TodoItem = ({ name, date,  indexID, changeStatus }) => {
-  const [tStatus, setStatus] = useState(false);
-  const handleStatusChange = (event) => {
+  const [tStatus, setStatus] = useState(false);                                     //  tStatus holds the state of complete task button
+  const handleStatusChange = (event) => {                                           //  tStatus manage the state of complete task button
     tStatus ? setStatus(false) : setStatus(true);
     setStatus(false);
-    changeStatus(indexID);
+    changeStatus(indexID);                                                          //  the index is passed to set element as completed
   };
 
   return (
@@ -16,6 +16,7 @@ const TodoItem = ({ name, date,  indexID, changeStatus }) => {
       >
         DONE
       </button>
+
       <input
         type="text"
         name="itemName"
@@ -24,6 +25,7 @@ const TodoItem = ({ name, date,  indexID, changeStatus }) => {
         value={name}
         readOnly
       />
+
       <input
         type="text"
         name="itemDate"
@@ -32,6 +34,7 @@ const TodoItem = ({ name, date,  indexID, changeStatus }) => {
         value={date}
         readOnly
       />
+      
     </div>
   );
 };

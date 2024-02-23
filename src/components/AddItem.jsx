@@ -4,14 +4,13 @@ const AddItem = ({ onNewItem }) => {
   const [itemDate, setItemDate] = useState();
 
   const handleNameChange = (event) => {
-    setItemName(event.target.value);
-    console.log(event.target.value);
+    setItemName(event.target.value);                                                    //  this function handle the state change of itemName
   };
   const handleDateChange = (event) => {
-    setItemDate(event.target.value);
+    setItemDate(event.target.value);                                                    //  this function handle the state change of itemDate
   };
   const handleAddButton = () => {
-    const currentDate = new Date();
+    const currentDate = new Date();                                                     //  this function check the inserted date must not be less then todays date
     var dd = currentDate.getDate();
     var mm = currentDate.getMonth() + 1;
     var yyyy = currentDate.getFullYear();
@@ -23,7 +22,7 @@ const AddItem = ({ onNewItem }) => {
     }
     var today = yyyy + "-" + mm + "-" + dd;
 
-    itemName && itemDate
+    itemName && itemDate                                                              //  ternarry opprator is used to ensure both the fields are populated
       ? itemDate >= today
         ? onNewItem(itemName, itemDate)
         : console.log("GIVE VALID DATE")
@@ -33,7 +32,8 @@ const AddItem = ({ onNewItem }) => {
   };
 
   return (
-    <div className="m_AddItem">
+                                                                    // the add item component
+    <div className="m_AddItem">                                                   
       <input
         type="text"
         name="itemName"
@@ -45,6 +45,7 @@ const AddItem = ({ onNewItem }) => {
         }}
         placeholder="ENTER TASK"
       />
+
       <input
         type="date"
         name="itemDate"
