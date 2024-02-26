@@ -24,7 +24,18 @@
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    /* border: 1px solid blue; */
 
+}
+.m_error
+{
+    display: flex;
+    justify-content: center;
+}
+.m_errorMsg
+{
+    color: red;
+    
 }
 .m_addButton
 {
